@@ -30,7 +30,7 @@ func main() {
 	// Rutas a desarollar:
 	tr := r.Group("/ticket")
 	// GET - “/ticket/getByCountry/:dest”
-	tr.GET("/:dest", t.GetTicketsByCountry())
+	tr.GET("getByCountry/:dest", t.GetTicketsByCountry())
 	tr.GET("/", t.GetAll())
 	// GET - “/ticket/getAverage/:dest”
 	if err := r.Run(); err != nil {
